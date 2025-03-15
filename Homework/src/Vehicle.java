@@ -33,8 +33,17 @@ public class Vehicle {
 
 class Car extends Vehicle{
     private String fuelType;
+    private bool engine;
     private double engineSize;
     private int range;
+
+    public void startEngine(){
+    this.engine = True;
+    }
+
+    public void offEngine(){
+    this.engine = false;
+    }
 
     public int getRange(){
         System.out.println("Max range is " + range);
