@@ -3,7 +3,8 @@ class Car extends Vehicle{
     private double engineSize;
     private int range;
 
-    public Car(String brand, String model, int year, String fuelType, double engineSize, int range){
+    public Car(String brand, String model, int year,
+               String fuelType, double engineSize, int range){
         super(brand, model, year);
         this.fuelType = fuelType;
         this.engineSize = engineSize;
@@ -20,7 +21,7 @@ class Car extends Vehicle{
 
     public void displayInfo() {
         super.displayInfo();
-        System.out.println("Fuel type: " + this.getFuelType() + ", Engine size: " + this.getEngineSize() + ", Range: " + this.getRange() + "km");
+        System.out.println("Fuel type: " + this.getFuelType() + ", Engine size: " + this.getEngineSize() + "L, Range: " + this.getRange() + "km");
     }
 
     public int getRange(){
