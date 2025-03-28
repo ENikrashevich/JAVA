@@ -1,5 +1,5 @@
 class SportCar extends Car{
-    
+
     private int topSpeed;
     private int percentFuel;
     private String transmissionType;
@@ -19,6 +19,11 @@ class SportCar extends Car{
         return this.percentFuel;
     }
 
+    public void useNitro() {
+        System.out.println("Nitro activated! Speed boosted!");
+        percentFuel -= 15;
+    }
+
     public void shiftGear() {
         System.out.println("Shifting gear with " + transmissionType + " transmission");
     }
@@ -30,7 +35,7 @@ class SportCar extends Car{
     public void displayInfo() {
         super.displayInfo();
         System.out.println("Top speed: " + this.getTopSpeed() + ", Percent fuel: " + this.getPercentFuel()
-         + "%, Transmission type:" + this.getTransmissionType());
+                + "%, Transmission type:" + this.getTransmissionType());
     }
 
     public int getTopSpeed(){
