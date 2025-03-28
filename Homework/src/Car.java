@@ -11,6 +11,14 @@ class Car extends Vehicle{
         this.range = range;
     }
 
+    public double calculateFuelConsumption() {
+        return (engineSize * 100) / range;
+    }
+
+    public boolean checkServiceNeeded() {
+        return this.range > 10000;
+    }
+
     public void honk() {
         System.out.println("Honking the horn");
     }
